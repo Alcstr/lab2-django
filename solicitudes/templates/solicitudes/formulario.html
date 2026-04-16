@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Solicitudes</title>
+</head>
+<body>
+    <h1>Formulario de Solicitud</h1>
+    <!-- enctype="multipart/form-data" es necesario para poder subir archivos -->
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enviar Solicitud</button>
+    </form>
+</body>
+</html>
