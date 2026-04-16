@@ -12,7 +12,7 @@ class Solicitud(models.Model):
     nombre = models.CharField(max_length=150, verbose_name="Nombre")
     documento = models.CharField(max_length=50, verbose_name="Documento")
     correo = models.EmailField(verbose_name="Correo electrónico")
-    telefono = models.CharField(max_length=20, verbose_name="Teléfono")
+    telefono = models.BigIntegerField(verbose_name="Teléfono")
     tipo = models.CharField(max_length=20, choices=TIPO_OPCIONES, verbose_name="Tipo de solicitud")
     asunto = models.CharField(max_length=200, verbose_name="Asunto")
     descripcion = models.TextField(verbose_name="Descripción")
